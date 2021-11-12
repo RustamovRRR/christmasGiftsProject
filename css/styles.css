@@ -132,7 +132,7 @@ p {
 }
 .banner h2 {
   font-family: var(--fontSecondary);
-  color: var(--clrPrimary);
+  color: var(--clrPrimaryLight);
   /* animation */
 }
 .banner h1 {
