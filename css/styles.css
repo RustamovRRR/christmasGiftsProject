@@ -113,6 +113,12 @@ p {
   color: var(--clrPrimary);
   background: var(--clrPrimaryLight);
 }
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 /* --------------------Header Style---------------------------------- */
 
@@ -185,9 +191,20 @@ p {
 
 .specificity:hover {
   background: var(--clrWhite);
-  box-shadow: 0 2px 0 var(--clrPrimary);
+  box-shadow: 0 2px var(--clrPrimary);
 }
 
 .specificity:hover .specificity-icon {
   transform: translateY(-5px);
+}
+@media screen and (min-width: 576px) {
+  .specificity {
+    float: left;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .specificity {
+    width: 25%;
+  }
 }
