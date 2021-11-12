@@ -149,3 +149,13 @@ p {
   font-size: 1.25rem;
   padding: 1rem 1.75rem;
 }
+
+.content-devider {
+  background: linear-gradient(
+    to right,
+    var(--clrPrimary),
+    rgb(134, 228, 134),
+    var(--clrPrimary)
+  );
+  height: 0.5rem;
+}
