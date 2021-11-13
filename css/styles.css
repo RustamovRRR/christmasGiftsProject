@@ -457,3 +457,29 @@ p {
     width: 50%;
   }
 }
+/* 
+----------------------------footer---------------------
+*/
+.footer {
+  background: var(--clrGrey1);
+  text-align: center;
+}
+.social-icon {
+  color: var(--clrWhite);
+  font-size: 1.25rem;
+  margin-right: 1rem;
+  transition: var(--transition);
+}
+.social-icon:hover {
+  color: #3e990d;
+}
+
+.footer-text {
+  color: var(--clrWhite);
+  margin-top: 1.25rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.company {
+  color: var(--clrPrimary);
+}
