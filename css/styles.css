@@ -138,6 +138,73 @@ p {
     padding: 4rem 1rem;
   }
 }
+
+/* 
+------------------------animation-----------------
+*/
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-200px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateX(50px);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(200px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateX(-50px);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes show {
+  0% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 /* 
 --------------------------navbar-------------------------------------
 */
@@ -151,6 +218,7 @@ p {
   z-index: 2;
   cursor: pointer;
   /* animation */
+  animation: bounce 2s ease infinite;
 }
 /* navbar */
 .navbar {
@@ -217,6 +285,7 @@ p {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../images/main1.jpeg") center/cover no-repeat fixed;
   position: relative;
+  /* if we didnt add overflow-x horizontal scroll bar will appear */
   overflow-x: hidden;
 }
 .banner {
@@ -230,6 +299,7 @@ p {
   font-family: var(--fontSecondary);
   color: var(--clrPrimary);
   /* animation */
+  animation: slideFromRight 5s ease-in-out;
 }
 .banner h1 {
   font-family: var(--fontPrimary);
@@ -238,12 +308,15 @@ p {
   margin-top: 1.25rem;
   margin-bottom: 2rem;
   /* animation */
+  animation: slideFromLeft 5s ease-in-out;
 }
 .banner-btn {
   outline: 0.125rem solid var(--clrPrimaryLight);
   outline-offset: 0.25rem;
   font-size: 1.25rem;
   padding: 1rem 1.75rem;
+  /* animation */
+  animation: show 5s linear;
 }
 /* ----------------Divider--------------------- */
 .content-devider {
